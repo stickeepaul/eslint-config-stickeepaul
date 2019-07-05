@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-stickeepaul",
-  "version": "0.0.2",
+  "name": "eslint-config-stickee",
+  "version": "1.0.0",
   "description": "Stickee ESLint config",
   "main": "index.js",
   "scripts": {

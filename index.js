@@ -10,8 +10,14 @@ module.exports = {
         "prettier",
         "plugin:vue/recommended"
     ],
-    
-    "parser": "babel-eslint",
+
+    "parser": 'vue-eslint-parser',
+    "parserOptions": {
+        // Use babel-eslint for JavaScript
+        "parser": "babel-eslint",
+        // With import/export syntax
+        "sourceType": "module"
+    },
 
     "rules": {
         "comma-dangle": 0,
@@ -34,5 +40,5 @@ module.exports = {
     "plugins": [
         "prettier",
         "vue"
-    ]
+    ],
 }
