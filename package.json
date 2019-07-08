@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Stickee ESLint config",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "javascript",
     "lint",
@@ -16,11 +13,23 @@
   ],
   "author": "Paul Tibbetts <paul.tibbetts@stickee.co.uk>",
   "license": "ISC",
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": ">= 5.16.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-vue": "^5.2.3",
+    "prettier": "^1.16.4"
+  },
   "peerDependencies": {
     "babel-eslint": "^9.0.0",
     "eslint": ">= 5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
