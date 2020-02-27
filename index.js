@@ -4,7 +4,13 @@ module.exports = {
     node: true
   },
 
-  extends: ["airbnb", "plugin:vue/recommended", "eslint:recommended", "plugin:prettier/recommended"],
+  extends: [
+      require.resolve('eslint-config-airbnb-base'),
+      "plugin:vue/recommended",
+      "eslint:recommended",
+      require.resolve('eslint-config-prettier'),
+      require.resolve('eslint-config-prettier/vue')
+  ],
   parser: "vue-eslint-parser",
   parserOptions: {
     // Use babel-eslint for JavaScript
@@ -12,7 +18,6 @@ module.exports = {
     // With import/export syntax
     sourceType: "module"
   },
-
   rules: {
     // disallow trailing commas
     "comma-dangle": ["error", "never"],
@@ -22,13 +27,6 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     // disallow dangling underscores
     "no-underscore-dangle": 0,
-    // understand jsx files
-    "react/jsx-filename-extension": [
-      1,
-      {
-        extensions: [".js", ".jsx"]
-      }
-    ],
     // don't require .vue extension when importing
     "import/extensions": [
       "error",
