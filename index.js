@@ -4,8 +4,7 @@ module.exports = {
     node: true
   },
 
-  extends: ["airbnb", "prettier", "plugin:vue/recommended"],
-
+  extends: ["airbnb", "plugin:vue/recommended", "eslint:recommended", "plugin:prettier/recommended"],
   parser: "vue-eslint-parser",
   parserOptions: {
     // Use babel-eslint for JavaScript
@@ -17,9 +16,10 @@ module.exports = {
   rules: {
     // disallow trailing commas
     "comma-dangle": ["error", "never"],
-    import: 0,
-    // disable methods on `console`
-    "no-console": 1,
+    // allow `console` methods during development production
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    // allow debugger during development
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     // disallow dangling underscores
     "no-underscore-dangle": 0,
     // understand jsx files
@@ -50,22 +50,9 @@ module.exports = {
         ]
       }
     ],
-    // allow debugger during development
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     // 4 spaces indent
     indent: "off",
     "vue/html-indent": ["error", 4],
-    // only allow 1 vue/html attribute per line
-    "vue/max-attributes-per-line": [
-      1,
-      {
-        singleline: 1,
-        multiline: {
-          max: 1,
-          allowFirstLine: true
-        }
-      }
-    ],
     // enforce a maximum line length
     // except for urls and strings
     "max-len": [
@@ -90,6 +77,5 @@ module.exports = {
       }
     ]
   },
-
   plugins: ["prettier", "vue"]
 };

@@ -19,14 +19,14 @@ These settings can be installed globally or locally. It's best to install them l
 1. If you don't already have a `package.json` create one with `npm init`
 2. Install the peer dependencies of the config:
     ```
-    npx install-peerdeps --dev eslint-config-stickeepaul
+    npx install-peerdeps --dev eslint-config-stickee
     ```
 3. Admire all the new devDependencies you have
 4. Create an `.eslintrc` file in the root of your project's directory:
     ```
     {
         "extends": [
-            "stickeepaul"
+            "stickee"
         ],
     }
     ```
@@ -67,7 +67,7 @@ This is useful for catching any code that hasn't been set up to use ESLint yet.
     ```
     {
         "extends": [
-            "stickeepaul"
+            "stickee"
         ]
     }
     ```
@@ -80,7 +80,7 @@ You can override any of the ESLint or Prettier settings.
 ```
 {
     "extends": [
-        "stickeepaul"
+        "stickee"
     ],
     "rules": {
         "no-console": 2,
