@@ -16,13 +16,15 @@ These settings can be installed globally or locally. It's best to install them l
 
 ### Local installation
 
+> Optionally you can install [stickee-javascript-code-style](https://www.npmjs.com/package/stickee-javascript-code-style) and skip steps 2 & 4.
+
 1. If you don't already have a `package.json` create one with `npm init`
-2. Install the peer dependencies of the config:
+2. Install the peer dependencies of the config (optional)
     ```
     npx install-peerdeps --dev eslint-config-stickee
     ```
 3. Admire all the new devDependencies you have
-4. Create an `.eslintrc` file in the root of your project's directory:
+4. Create an `.eslintrc` file in the root of your project's directory (optional)
     ```
     {
         "extends": [
@@ -30,7 +32,7 @@ These settings can be installed globally or locally. It's best to install them l
         ],
     }
     ```
-5. Add any custom webpack path resolvers you use:
+5. Add any custom webpack path resolvers you use*:
     ```
     // this is used in Convert to allow the use of `import @/api`
     // which is set in the webpack config file
@@ -51,13 +53,38 @@ These settings can be installed globally or locally. It's best to install them l
     ```
 7. Write beautiful JavaScript that makes QA proud
 
+
+\* 
+The config file must **only** contain webpack settings - do **not** point it to a `webpack.mix.js` file as this contains Laravel mix code.
+
+If you are using Laravel Mix you can create a new `webpack.config.js` file and reference it from `webpack.mix.js`:
+
+#### webpack.mix.js
+```js
+mix.webpackConfig(require('./webpack.config.js'));
+```
+
+#### webpack.config.js
+```js
+const path = require('path');
+
+module.exports = {
+    resolve: {
+        extensions: ['.js', '.vue'],
+        alias: {
+            '@': path.join(__dirname, '/resources/js')
+        }
+    }
+};
+```
+
 ### Global installation
 
 This is useful for catching any code that hasn't been set up to use ESLint yet.
 
 1. Install globally:
     ```
-    npx intall-peerdeps --global eslint-config-stickeepaul
+    npx intall-peerdeps --global eslint-config-stickee
     ```
 2. Create a global `.eslintrc` file. ESLint looks for this in your home directory:
     `~/.eslintrc` for Mac/Linux
