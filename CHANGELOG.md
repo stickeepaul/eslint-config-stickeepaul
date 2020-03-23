@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/stickeepaul/eslint-config-stickeepaul/compare/v1.5.0...v1.5.1) (2020-03-23)
+
+
+### Bug Fixes
+
+* missing 1.4.0 in changelog - test release ([ff31f77](https://github.com/stickeepaul/eslint-config-stickeepaul/commit/ff31f77f457f2ce5919ac5098084cb58539f47d7))
+* set git release config back to default - test release ([0548c79](https://github.com/stickeepaul/eslint-config-stickeepaul/commit/0548c79da1c523a15f2db667172e0513063f96d2))
+
 # [1.5.0](https://github.com/stickeepaul/eslint-config-stickeepaul/compare/v1.4.1...v1.5.0) (2020-03-23)
 
 
