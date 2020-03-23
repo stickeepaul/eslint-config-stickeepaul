@@ -19,8 +19,6 @@ module.exports = {
     sourceType: "module"
   },
   rules: {
-    // disallow trailing commas
-    "comma-dangle": ["error", "never"],
     // allow `console` methods during development production
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     // allow debugger during development
@@ -71,7 +69,8 @@ module.exports = {
       "error",
       {
         tabWidth: 4,
-        singleQuote: true
+        singleQuote: true,
+        printWidth: 120
       }
     ]
   },
