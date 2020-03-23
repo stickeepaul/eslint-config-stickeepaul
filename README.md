@@ -27,7 +27,7 @@ The easiest way to upgrade is to:
 - remove **all** `eslint-*` packages from your `package.json`
 - rerun `npx install-peerdeps eslint-config-stickee`
 
-## Installation
+## Install
 
 > Optionally you can install [stickee-javascript-code-style](https://www.npmjs.com/package/stickee-javascript-code-style) and skip steps 2 & 4.
 
