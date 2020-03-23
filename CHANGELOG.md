@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/stickeepaul/eslint-config-stickeepaul/compare/v1.5.1...v1.6.0) (2020-03-23)
+
+
+### Bug Fixes
+
+* changelog links ([3a462e7](https://github.com/stickeepaul/eslint-config-stickeepaul/commit/3a462e776d756f52be462f06a495c873d6747cb8))
+
+
+### Features
+
+* re-add github action - test release ([a42671b](https://github.com/stickeepaul/eslint-config-stickeepaul/commit/a42671b9bf7e3a68da52835e23db2d639ac88637))
+
 ## [1.5.1](https://github.com/stickeepaul/eslint-config-stickeepaul/compare/v1.5.0...v1.5.1) (2020-03-23)
 
 
