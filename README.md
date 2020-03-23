@@ -10,11 +10,24 @@ Stickee settings for [ESlint](https://eslint.org/) and [Prettier](https://pretti
 
 <small>*no refunds</small>
 
+## Upgrade
+
+### 1.* -> 2.*
+
+V2.0 no longer requires the following packages:
+
+- `eslint-plugin-jsx-a11y`
+- `eslint-plugin-react`
+- `eslint-plugin-react-hooks`
+
+and [updates the version numbers of a few packages](https://github.com/stickeepaul/eslint-config-stickeepaul/commit/9eb5da9f554e5b4eb140d1a94ffe70205ab60ad9).
+
+The easiest way to upgrade is to:
+
+- remove **all** `eslint-*` packages from your `package.json`
+- rerun `npx install-peerdeps eslint-config-stickee`
+
 ## Installation
-
-These settings can be installed globally or locally. It's best to install them locally on new projects.
-
-### Local installation
 
 > Optionally you can install [stickee-javascript-code-style](https://www.npmjs.com/package/stickee-javascript-code-style) and skip steps 2 & 4.
 
@@ -78,29 +91,7 @@ module.exports = {
 };
 ```
 
-### Global installation
-
-This is useful for catching any code that hasn't been set up to use ESLint yet.
-
-1. Install globally:
-    ```
-    npx intall-peerdeps --global eslint-config-stickee
-    ```
-2. Create a global `.eslintrc` file. ESLint looks for this in your home directory:
-    `~/.eslintrc` for Mac/Linux
-    `C:\Users\you\.eslintrc` for Windows
-
-    It should look like:
-    ```
-    {
-        "extends": [
-            "stickee"
-        ]
-    }
-    ```
-3. You can now run `eslint .` to lint all the files in your current directory
-
-### Settings
+## Settings
 
 You can override any of the ESLint or Prettier settings. 
 
@@ -128,15 +119,15 @@ You can override any of the ESLint or Prettier settings.
 **Note**
 Overwriting Prettier settings requires you to rewrite all the settings.
 
-### Editor installation
+## Editor installation
 
 ESLint should be configured to run as a pre-commit hook on the project you're working on but there's no harm in running it on every save.
 
-#### PHPStorm
+### PHPStorm
 
 Refer to [the docs](https://www.jetbrains.com/help/phpstorm/eslint.html) for instructions on running ESLint from PHPStorm.
 
-#### VSCode
+### VSCode
 
 1. Install the [ESLint package](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 2. Change your VSCode `settings.json` file:
