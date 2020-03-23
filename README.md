@@ -25,7 +25,7 @@ and [updates the version numbers of a few packages](https://github.com/stickeepa
 The easiest way to upgrade is to:
 
 - remove **all** `eslint-*` packages from your `package.json`
-- rerun `npx install-peerdeps eslint-config-stickee`
+- rerun installation step 2 (below)
 
 ## Install
 
@@ -68,7 +68,7 @@ The easiest way to upgrade is to:
 
 
 \* 
-The config file must **only** contain webpack settings - do **not** point it to a `webpack.mix.js` file as this contains Laravel mix code.
+The config file must **only** contain webpack settings. Do **not** point it to a `webpack.mix.js` file as this contains Laravel mix code.
 
 If you are using Laravel Mix you can create a new `webpack.config.js` file and reference it from `webpack.mix.js`:
 
@@ -117,7 +117,7 @@ You can override any of the ESLint or Prettier settings.
 ```
 
 **Note**
-Overwriting Prettier settings requires you to rewrite all the settings.
+Overwriting Prettier settings requires you to rewrite the whole array.
 
 ## Editor installation
 
@@ -143,7 +143,7 @@ Refer to [the docs](https://www.jetbrains.com/help/phpstorm/eslint.html) for ins
     },
     // tell the ESLint plugin to run on save
     "eslint.autoFixOnSave": true,
-    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through ESLint already
     "prettier.disableLanguages": ["javascript", "javascriptreact"],
     ```
 
